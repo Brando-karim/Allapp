@@ -1,0 +1,157 @@
+.BlackWorld .Logo , .WhiteWorld .Logo{
+  width: 150px;
+  height: 150px;
+}
+
+.BlackWorld .Head , .WhiteWorld .Head{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+  align-items: center;
+}
+.BlackWorld {
+  background-color: rgb(35, 31, 32);
+  color: white;
+  min-height: 100vh;
+}
+.WhiteWorld {
+  background-color: white;
+  color:black;
+  min-height: 100vh;
+}
+.BlackWorld * , .WhiteWorld * {box-sizing:border-box}
+
+/* Slideshow container */
+.BlackWorld .slideshow-container , .WhiteWorld .slideshow-container{
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.BlackWorld .mySlides ,.WhiteWorld .mySlides {
+  display: none;
+}
+
+
+/* Next & previous buttons */
+.BlackWorld .prev, .BlackWorld .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.WhiteWorld .prev, .WhiteWorld .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: black;
+}
+
+/* Position the "next button" to the right */
+.BlackWorld .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.WhiteWorld .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.BlackWorld .prev:hover, .BlackWorld .next:hover {
+  background-color: rgba(119, 116, 116, 0.8);
+}
+.WhiteWorld .prev:hover, .WhiteWorld .next:hover {
+  background-color: rgba(119, 116, 116, 0.8);
+}
+
+/* Caption text */
+.BlackWorld .text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: max-content;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.WhiteWorld .text {
+  color:white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  width: max-content;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Number text (1/3 etc) */
+.WhiteWorld .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.BlackWorld .numbertext {
+  color: white ;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.BlackWorld .active , .WhiteWorld .active{
+  background-color: #717171;
+}
+
+/* Fading animation */
+.BlackWorld .fade , .WhiteWorld .fade {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* Ensure final state applies after animation */
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.BlackWorld, .WhiteWorld {
+  transition: background-color 0.6s ease, color 0.6s ease; /* Smooth transition for background and text color */
+}
+
+.BlackWorld *, .WhiteWorld * {
+  box-sizing: border-box;
+  transition: color 0.6s ease, background-color 0.6s ease; /* Ensure smooth transitions for child elements */
+}
